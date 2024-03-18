@@ -1,0 +1,23 @@
+console.log(&quot;line 1&quot;)
+let promise = new Promise((resolve,reject)=&gt;{
+let str1=&quot;hi&quot;;
+let str2=&quot;hi&quot;;
+setTimeout(()=&gt;
+{
+if(str1 === str2){
+resolve(&quot;success&quot;);
+}
+else{
+reject(&quot;failed&quot;);
+}
+},2000)
+});
+
+promise.then((message)=&gt;{
+console.log(&quot;My self Mayuri&quot;);
+})
+.catch((message)=&gt;{
+console.log(&quot;completed&quot;);
+});
+console.log(&quot;line2&quot;);
+console.log(&quot;line3&quot;)
